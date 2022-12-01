@@ -59,7 +59,7 @@
     grid-template-columns:  50px 50px 50px 50px 50px 50px;
     gap: 5px;
     padding: 5px;
-    justify-content: right;
+    justify-items: right;
 }
 .nav2 {
     grid-area: nav2;
@@ -141,7 +141,6 @@
         "main"
         ;
     }
-    
     .rightMenu {
         display: none;
     }
