@@ -1,7 +1,7 @@
 .mainContainer {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 75px 100vh;  
+    grid-template-rows: 0.2fr 1fr;  
     grid-template-areas:
     "header header header"
     "leftMenu main rightMenu"
@@ -29,6 +29,7 @@
     border: dashed 1px black;
     display: grid;
     gap: 5px;
+    
 }
 .main {
     grid-area: main;
@@ -59,7 +60,7 @@
     grid-template-columns:  50px 50px 50px 50px 50px 50px;
     gap: 5px;
     padding: 5px;
-    justify-items: right;
+    justify-content: right;
 }
 .nav2 {
     grid-area: nav2;
@@ -69,42 +70,314 @@
 .navbuttons {
     border: dashed 1px black; 
     width: 50px;
-    height: 50px;         
+    height: 50px;
+
 }
 
 .leftMenu .top {
     border: dashed 1px black;
-    height: 300px;
+    border-radius: 10px;
+    height: 1fr;
+
+    display: grid;
+    grid-template-rows: 3fr 2fr 1fr 0.5fr;
 }
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    border: dashed 1px black;
+    justify-content: center;
+    
+    }
+#profileName {
+    font-weight: bold;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.profile #profileDescription {
+    margin-top: 0px;
+    color: rgb(161, 161, 161);
+}
+
+.views {
+    border: dashed 1px black;
+    color: lightgrey;
+    
+}
+.tools {
+    border: dashed 1px black;
+       
+}
+.tools > a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    
+}
+.myItems {
+    display: grid;
+    justify-items: center;
+}
+.myItems > p {
+    font-weight: bold;
+    }
 .leftMenu .middle {
     border: dashed 1px black;
-    height: 200px;
+    border-radius: 10px;
+    height: 1fr;
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
 }
+.leftMenu .organisation {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+}
+.leftMenu .organisation #orgImg {
+    height: 70px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.orgInfo > a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 2px;
+    margin-left: 3px;
+}
+
 .leftMenu .bottom {
     border: dashed 1px black;
+    border-radius: 10px;
     height: 300px;
+
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+}
+.bottom .recentSearches {
+    margin-left: 15px;
+}
+.bottom .recentSearches h5 {
+    font-size: larger;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    
+}
+.bottom .recentSearches #searches {
+    font-weight: bold;
+    text-decoration: none;
+    color: lightgrey;
+}
+.bottom .groups {
+    display: grid;
+    margin-left: 3px;
+}
+
+.bottom .groups #groupsLinks {
+    font-weight: none;
+    text-decoration: none;
+    color: rgba(169, 169, 169, 0.573);
+
+
 }
 .rightMenu .top {
     border: dashed 1px black;
-    height: 300px;
+    border-radius: 10px;
+    height: min-content;
+    display: grid;
+    grid-template-rows: 0.1fr 0.5fr;
+    
+        
 }
+.rightMenu .top #title {
+    margin-bottom: 0;
+    margin-left: 2px;
+    height: 20px;
+}
+.rightMenu .top ul {
+    padding-left: 17px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.rightMenu .top li {
+   color: darkgray; 
+   padding-left: 2px;
+}
+
 .rightMenu .middle {
     border: dashed 1px black;
-    height: 200px;
+    border-radius: 10px;
+    display: grid;
+       
+}
+.rightMenu .middle .mostViewedContent {
+    justify-items: left;
+    margin: 2px;
+}
+.rightMenu .middle #title {
+    font-weight: bold;
+}
+.rightMenu .middle ol {
+    padding-left: 17px;
+}
+.rightMenu .middle .li {
+    color: darkgray;
+}
+.rightMenu .middle a {
+    text-decoration: none;
+    color: darkgray;
+    margin-bottom: 2px;
+    margin-left: 3px;
+    font-size: small;
 }
 .rightMenu .bottom {
     border: dashed 1px black;
-    height: 300px ;
+    border-radius: 10px;
+    display: grid;
+}
+.rightMenu .bottom .addToYourFeed {
+    border: dashed 1px black;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.recommendAdd {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border: dashed 1px black;
+}
+.addToYourFeed #profileName {
+    margin-top: 5px;
 }
 .main .top {
     border: dashed 1px black;
+    border-radius: 10px;
     height: 100px ;
+    
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 2fr 1fr;
+    grid-template: 
+    "writepost "
+    "postbuttons"
+    ;
+}
+.profileImage {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 500px;
+   
+}
+#profileDescription {
+    color: darkgray;
+    font-size: x-small;
+}
+.profileText button {
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 .main .middle {
     border: dashed 1px black;
-    height: 500px;
+    height: 1fr;
+}
+.profileWithImage {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    border: dashed 1px black;
+    margin-left: 2px;
+}
+.main .middle #profileName {
+    margin-top: 2px;
+}
+.whoReacted a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.whoReacted p {
+    color: darkgray;
+}
+.write-post {
+    grid-area: writepost;
+    border: dashed 1px black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.textPost {
+    border: dashed 1px black;
+    margin-left: 2px;
+}
+.newsFeedPost .postImage {
+    display: grid;
+    border: dashed 1px black;
+}
+.postImage img {
+    height: 250px;
+}
+.responseBar {
+    border: dashed 1px black;
+    display: grid;
+    grid-template-rows: 25px 30px;
+}
+.responseIcons {
+    display: grid;
+    border: dashed 1px black;
+    grid-template-columns: 20px 20px;
+    justify-content: left;
+}
+.likeResponse {
+    border: dashed 1px black;
+    height: 20px;
+    width: 20px;
+}
+.clapResponse {
+    border: dashed 1px black;
+    height: 20px;
+    width: 20px;
+}
+.responseButtons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-right: 50%;
+}
+h4 {
+margin-left: 50px;
+margin-top: 20px;
+margin-bottom: 0;
+}
+.responseButtons .buttons {
+    border: dashed 1px black;
+
+}
+.post-buttons {
+    grid-area: postbuttons;
+    background-color: rgba(128, 26, 0, 0.546);
+    border: dashed 1px black;
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    gap: 5px;
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
+.postbutton {
+    border: dashed 1px black;
+    height: 1fr;
+    width: 1fr;
+    margin: 0;
+
+}
+
+.followButton {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    border-style: none;
+}
 @media screen and (max-width: 850px) {
 
     .mainContainer {
